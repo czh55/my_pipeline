@@ -1,0 +1,24 @@
+id: create-mobile-portrait-composition
+title: 手机单人出片：机位高度 + 距离 + 网格
+domain: create
+intent: 用固定机位参数替代「不会构图」，在站/半身/蹲/坐下稳定比例与自然感
+principle: 开门（开网格定姿势）→ 放入（对机位）→ 关门（连拍回看）
+steps:
+  - name: 开网格并定姿势类型
+    detail: 打开相机网格线；先选全身 / 半身 / 蹲姿 / 坐姿之一，不要边摆边猜机位。
+  - name: 全身——对齐胸口、后退约 2m
+    detail: 被拍者站立，手机约对齐胸部高度，人物落在中下两格，避免仰拍畸变。
+  - name: 半身——对齐鼻子、1.5×、外翻约 15°
+    detail: 镜头对齐鼻子附近，后退约 1.5m，1.5× 变焦，机位微外翻；眼睛对齐取景框顶线。
+  - name: 蹲姿同步蹲下
+    detail: 拍摄者先蹲再构图；手机与脸平行、1.5×；侧身对镜头，头顶卡顶线。
+  - name: 坐姿走对角线
+    detail: 让人走到画面一侧再后退约 1m，形成对角线，避免正面呆板。
+  - name: 每种连拍 3 张回看
+    detail: 回看机位与网格是否达标；半身重点练「外翻 15°」手感。
+when_to_use: 单人日常光线、主摄约 24–28mm 等效；想快速出片而不是研究复杂构图理论时。
+boundaries: 不适于多人合影、身高差极大、竖屏全身需重校距离；主题优先时先钉「拍什么」再调机位。
+source: video-notes · photo-composition-4tips 等；photo 集群约 167 条
+status: validated
+tags: [摄影, 手机, 构图, video-notes]
+updated: "2026-10-07"

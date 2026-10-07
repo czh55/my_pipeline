@@ -28,8 +28,57 @@
     "steps": 5
   },
   {
+    "id": "life-home-latte-art-chain",
+    "title": "居家拉花全链路：浓缩 → 奶泡 → 融合 → 出图",
+    "domain": "life",
+    "status": "snowball",
+    "steps": 5
+  },
+  {
+    "id": "communicate-amateur-portrait-coaching",
+    "title": "素人人像引导：四维口令片场",
+    "domain": "communicate",
+    "status": "validated",
+    "steps": 5
+  },
+  {
+    "id": "create-davinci-modular-grade",
+    "title": "达芬奇模块化调色：一节点一类调整",
+    "domain": "create",
+    "status": "validated",
+    "steps": 5
+  },
+  {
+    "id": "create-mobile-hsl-skin-rescue",
+    "title": "手机剪辑救黑黄皮：全局 → HSL 橙 → 塑形",
+    "domain": "create",
+    "status": "validated",
+    "steps": 5
+  },
+  {
+    "id": "create-mobile-portrait-composition",
+    "title": "手机单人出片：机位高度 + 距离 + 网格",
+    "domain": "create",
+    "status": "validated",
+    "steps": 6
+  },
+  {
+    "id": "create-on-camera-eye-expression",
+    "title": "上镜眼神：头眼分离与 45° 安全角",
+    "domain": "create",
+    "status": "validated",
+    "steps": 5
+  },
+  {
     "id": "create-travel-guide",
     "title": "一次旅行 → 单文件可视化攻略",
+    "domain": "life",
+    "status": "validated",
+    "steps": 5
+  },
+  {
+    "id": "life-freestyle-relaxed-distance",
+    "title": "自由泳省力远游：腿位 → 划程 → 侧换气",
     "domain": "life",
     "status": "validated",
     "steps": 5
@@ -40,6 +89,20 @@
     "domain": "life",
     "status": "validated",
     "steps": 4
+  },
+  {
+    "id": "work-bad-data-highlight-six-steps",
+    "title": "烂数据汇报：六步找可讲亮点",
+    "domain": "work",
+    "status": "validated",
+    "steps": 6
+  },
+  {
+    "id": "work-salary-negotiation-five-steps",
+    "title": "HR 压价：弹性五步法",
+    "domain": "work",
+    "status": "validated",
+    "steps": 5
   },
   {
     "id": "learn-scene-english-from-video",
