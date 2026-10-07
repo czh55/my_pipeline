@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本地剧集 → 一集剧情总结站 · my_pipeline</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="../index.html">my_pipeline</a><a href="../index.html">首页</a><a href="../principles.html">原则</a><a class="active" href="../pipelines/index.html">全部章程</a></nav>
+
+<header class="hero">
+  <p class="eyebrow">create-drama-episode-recap</p>
+  <h1>本地剧集 → 一集剧情总结站</h1>
+  <p>把已下载的一集电视剧变成可检索的图文剧情回顾（情节/台词/人物/伏笔）</p>
+  <div class="meta-row"><span class="status s-snowball">滚雪球</span><span class="tag domain">创作</span><span class="muted">2026-10-07</span><span class="tag">剧集</span><span class="tag">Whisper</span><span class="tag">追剧</span><span class="tag">高频</span></div>
+</header>
+<section>
+  <h2 class="section-title">步骤</h2>
+  <ol class="steps"><li><span class="n">1</span><div><strong>锁定剧集与文件</strong><p>确认 drama / episode / 本地 mp4 路径；维护 cast.md（演员与角色）。</p></div></li><li><span class="n">2</span><div><strong>转录并切关键场景</strong><p>faster-whisper / Whisper 出 JSON；按地点·事件·情绪切 8–12 场景，写叙述与关键台词。</p></div></li><li><span class="n">3</span><div><strong>抽帧与台词英译配音</strong><p>ffmpeg 按场景时间抽帧；台词补 EN；必要时 edge-tts 生成引用朗读。</p></div></li><li><span class="n">4</span><div><strong>渲染单集 HTML</strong><p>产出含梗概/情节/人物/看点/伏笔/启示的单文件页，资源进 docs/images。</p></div></li><li><span class="n">5</span><div><strong>校验索引并发布</strong><p>validate → 更新 index.json / 搜索索引 → commit docs+content → push main。云 Agent 只负责索引推送，不读本地盘。</p></div></li></ol>
+</section>
+<article class="prose extras">
+<h2>心法</h2><p class="principle">开门（本地视频）→ 放入（转录切场景）→ 关门（HTML + 索引 push）</p><h2>何时使用</h2><p>追剧后想留下「下周还记得发生了什么」的回顾资产时。</p><h2>边界</h2><p>视频不入库；无本地片源不要硬跑；半自动时人工完成转录编辑再触发 push。</p><h2>来源</h2><p>drama-analysis WORKFLOW；daily-hub 客厅；本机约 487 集总结</p>
+</article>
+<p class="more"><a href="index.html">← 全部章程</a></p>
+
+<footer>经历 → 章程 → 复用 · 滚雪球沉淀能力</footer>
+</div>
+</body>
+</html>

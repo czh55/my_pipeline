@@ -1,0 +1,22 @@
+id: learn-podcast-deep-summary
+title: 小宇宙播客 → 深度总结 SVG 站
+domain: learn
+intent: 把一集播客压成可滚动复习的结构化长图（行动清单、避坑、时间轴）
+principle: 开门（取音频）→ 放入（转录深挖）→ 关门（SVG/HTML + main）
+steps:
+  - name: 收小宇宙链接
+    detail: Webhook 解析 xiaoyuzhoufm URL；浏览器 CDP 取 audio src 与标题；同 URL 只处理一次。
+  - name: 限流下载并转录
+    detail: rate-limit 后 curl 下 m4a；Whisper（默认 small）；禁止并发多 URL 打爆 CDN。
+  - name: 按规范写深度总结
+    detail: 区分嘉宾/主持人；强制产出行动清单、避坑、时间轴与可复核论点，拒绝空泛金句墙。
+  - name: 生成 SVG / HTML / 语音
+    detail: generate mjs → buildSvg；可选 generate_svg_audio、svg-to-html；归档转录索引。
+  - name: 更新 index 并 push main
+    detail: prepend docs/index.json；提交后必须上 main；清理临时 m4a 与一次性脚本。
+when_to_use: 听完一集想留下「下次还能用」的笔记墙时（早餐餐厅场景）。
+boundaries: 仅小宇宙；与原创播客大纲流水线（my_podcast）不同——本条是消费他人节目。
+source: audio-workshop WORKFLOW；daily-hub 餐厅；本机约 169 条索引
+status: snowball
+tags: [播客, Whisper, SVG, 高频]
+updated: "2026-10-07"

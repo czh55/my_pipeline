@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日更学习页：选题 → Agent 精讲 → 校验 → Pages · my_pipeline</title>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="top"><a class="brand" href="../index.html">my_pipeline</a><a href="../index.html">首页</a><a href="../principles.html">原则</a><a class="active" href="../pipelines/index.html">全部章程</a></nav>
+
+<header class="hero">
+  <p class="eyebrow">learn-daily-agent-pages</p>
+  <h1>日更学习页：选题 → Agent 精讲 → 校验 → Pages</h1>
+  <p>用日历驱动，每天稳定产出一页可学内容（算法 / 歌词等），绝不发占位残页</p>
+  <div class="meta-row"><span class="status s-snowball">滚雪球</span><span class="tag domain">学习</span><span class="muted">2026-10-07</span><span class="tag">日更</span><span class="tag">Automation</span><span class="tag">算法</span><span class="tag">歌词</span><span class="tag">高频</span></div>
+</header>
+<section>
+  <h2 class="section-title">步骤</h2>
+  <ol class="steps"><li><span class="n">1</span><div><strong>跑选题脚本</strong><p>algo：generate.py --bank；lyric：generate.py --prepare；读写 history 保证去重轮换。</p></div></li><li><span class="n">2</span><div><strong>按方法论补齐内容</strong><p>算法走变量语义法（认型→三句→落码）；歌词按 lyric-learning-prompt 逐句精讲；缺精讲则 Agent 补全后再 --force。</p></div></li><li><span class="n">3</span><div><strong>可选语音</strong><p>edge-tts 生成当日讲解音频，挂到页面可播。</p></div></li><li><span class="n">4</span><div><strong>强制校验</strong><p>check_pages / finalize；algo 禁止日常 --allow-auto 占位页上线。</p></div></li><li><span class="n">5</span><div><strong>提交日更</strong><p>更新 index、archive/lessons、history；commit 信息用 daily: YYYY-MM-DD → push main → 打开站点确认。</p></div></li></ol>
+</section>
+<article class="prose extras">
+<h2>心法</h2><p class="principle">开门（脚本选题）→ 放入（按模板写精讲）→ 关门（check + push main）</p><h2>何时使用</h2><p>书房日课——需要「每天都有一页」的长期能力滚雪球时。</p><h2>边界</h2><p>与 Webhook 媒体流水线不同；内容质量门禁优先于准时——写不出完整精讲就当天停更，不发空壳。</p><h2>来源</h2><p>daily-algo（≈66 天, cron 08:00）+ daily-lyric-learning（≈72 课, cron 08:00）+ daily-photos 同构壳</p>
+</article>
+<p class="more"><a href="index.html">← 全部章程</a></p>
+
+<footer>经历 → 章程 → 复用 · 滚雪球沉淀能力</footer>
+</div>
+</body>
+</html>
