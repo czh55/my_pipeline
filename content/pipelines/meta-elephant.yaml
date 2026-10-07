@@ -1,0 +1,18 @@
+id: meta-elephant
+title: 如何把大象放进冰箱
+domain: meta
+intent: 用最短的笑话记住底层原则——凡事有步骤与章程
+principle: 开门 → 放入 → 关门
+steps:
+  - name: 开门
+    detail: 先打开容器/通道——创造做事的入口（空间、权限、注意力、时间窗）。
+  - name: 放入
+    detail: 把主体放进去——执行真正改变状态的那一步，而不是准备的准备。
+  - name: 关门
+    detail: 收束与确认——关好门，让结果稳定，并留下可复盘的痕迹。
+when_to_use: 面对任何「不知从何下手」的事时，先强制拆成至少这三步，再细化。
+boundaries: 不是让一切都压成三步；三步是心法骨架，具体领域要展开成可贴合自身的完整章程。
+source: 民间笑话 / 本仓库立仓隐喻
+status: seed
+tags: [principle, metaphor, 起步]
+updated: "2026-10-07"

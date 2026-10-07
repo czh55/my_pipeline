@@ -1,0 +1,22 @@
+id: meta-write-pipeline
+title: 如何把一次经历写成 pipeline
+domain: meta
+intent: 把「刚经历过的事」沉淀成可复制章程，而不是散落的印象
+principle: 开门（回忆）→ 放入（抽步骤）→ 关门（写边界与状态）
+steps:
+  - name: 定一件具体的事
+    detail: 只选最近一次真实经历（例如「周三做了西红柿炒蛋」），拒绝抽象口号。
+  - name: 写出意图
+    detail: 一句话说清「下次再遇到同类事，希望稳定得到什么结果」。
+  - name: 拆有序步骤
+    detail: 按时间顺序写 3～7 步；每步必须是可执行动作，不是形容词。
+  - name: 标适用与边界
+    detail: when_to_use 写触发条件；boundaries 写什么时候别硬套。
+  - name: 标状态并入库
+    detail: 新建 YAML，status 从 draft 起；跑 render-site.py 挂到站点。
+when_to_use: 刚办完一件事、觉得「下次还能更快/更稳」时，立刻写。
+boundaries: 没有亲身经历时不要硬编；可先用 seed 占位，等经历来了再填。
+source: 本仓库建仓约定
+status: draft
+tags: [meta, 写作, 滚雪球]
+updated: "2026-10-07"

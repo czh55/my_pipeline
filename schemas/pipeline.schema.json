@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://czh55.github.io/my_pipeline/schemas/pipeline.schema.json",
+  "title": "LifePipeline",
+  "type": "object",
+  "required": ["id", "title", "domain", "intent", "steps", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "domain": {
+      "type": "string",
+      "enum": ["meta", "life", "work", "learn", "create", "communicate"]
+    },
+    "intent": {
+      "type": "string",
+      "description": "这条章程要把什么经历变成可复制结果"
+    },
+    "principle": {
+      "type": "string",
+      "description": "一句话心法，可选；默认可对应「开门→放入→关门」"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["name", "detail"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "detail": { "type": "string" }
+        }
+      }
+    },
+    "when_to_use": { "type": "string" },
+    "boundaries": {
+      "type": "string",
+      "description": "什么时候不该硬套本流程"
+    },
+    "source": {
+      "type": "string",
+      "description": "经验来源：场景、日期、人或项目"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["seed", "draft", "validated", "snowball"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "updated": {
+      "type": "string",
+      "description": "ISO 日期 YYYY-MM-DD"
+    }
+  }
+}
