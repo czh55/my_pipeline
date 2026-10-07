@@ -119,10 +119,80 @@
     "steps": 5
   },
   {
+    "id": "communicate-couple-dialogue",
+    "title": "夫妻沟通（主题占位）",
+    "domain": "communicate",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "communicate-parents-dialogue",
+    "title": "父母沟通（主题占位）",
+    "domain": "communicate",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "create-camera-settings-by-scene",
+    "title": "拍照相机设置：按场景走 1-2-3",
+    "domain": "create",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "create-pose-body-part-coaching",
+    "title": "拍照姿势引导：按身体部位给口令",
+    "domain": "create",
+    "status": "seed",
+    "steps": 6
+  },
+  {
+    "id": "learn-shelve-books-by-abstraction",
+    "title": "收拾书：先按概念抽象层，再按数目类别",
+    "domain": "learn",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "life-coffee-ratio-first",
+    "title": "做咖啡：一切先讲配比（拿铁更吃 pipeline）",
+    "domain": "life",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "life-cook-by-seasoning-and-dish",
+    "title": "做饭：调料用法 × 菜品类型",
+    "domain": "life",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "life-driving-basics",
+    "title": "开车（主题占位）",
+    "domain": "life",
+    "status": "seed",
+    "steps": 5
+  },
+  {
+    "id": "life-renovation-toc-as-pipeline",
+    "title": "装修：把书的目录当成 pipeline 骨架",
+    "domain": "life",
+    "status": "seed",
+    "steps": 5
+  },
+  {
     "id": "meta-elephant",
     "title": "如何把大象放进冰箱",
     "domain": "meta",
     "status": "seed",
     "steps": 3
+  },
+  {
+    "id": "work-boss-report-calm-first",
+    "title": "老板汇报：先稳情绪，再按场景走步骤",
+    "domain": "work",
+    "status": "seed",
+    "steps": 5
   }
 ]

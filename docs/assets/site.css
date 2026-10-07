@@ -74,6 +74,14 @@ a.card:hover { border-color: rgba(232,160,92,0.5); text-decoration: none; transf
   background: linear-gradient(135deg, rgba(232,160,92,0.12), rgba(143,185,168,0.08));
   border: 1px solid var(--border); border-radius: 16px; padding: 22px 18px; margin-bottom: 36px;
 }
+.warning {
+  background: rgba(232,160,92,0.08);
+  border: 1px solid rgba(232,160,92,0.35);
+  border-radius: 16px; padding: 22px 18px; margin-bottom: 36px;
+}
+.warning p { color: var(--muted); margin-bottom: 10px; }
+.warning .warn-lead { color: var(--text); font-family: var(--font-display); font-size: 1.05rem; line-height: 1.5; }
+.warning strong { color: var(--accent); }
 .steps { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .steps.big { gap: 16px; }
 .steps li {
@@ -111,6 +119,7 @@ a.pipe-row:hover { border-color: rgba(232,160,92,0.45); text-decoration: none; }
 }
 .tag.domain { background: rgba(232,160,92,0.12); color: var(--accent); }
 .prose h2 { font-family: var(--font-display); font-size: 1.25rem; margin: 28px 0 10px; }
+.prose h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 18px 0 8px; color: var(--accent); }
 .prose p, .prose li { color: var(--muted); margin-bottom: 10px; }
 .prose ul { margin: 8px 0 12px 1.2rem; }
 .prose blockquote {

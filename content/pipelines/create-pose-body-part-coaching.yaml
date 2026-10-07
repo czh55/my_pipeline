@@ -1,0 +1,24 @@
+id: create-pose-body-part-coaching
+title: 拍照姿势引导：按身体部位给口令
+domain: create
+intent: 引导被拍者时，按头/肩/躯干/手/髋/腿/脚逐部位下可执行指令，而不是说「自然一点」
+principle: 开门（定姿势目标）→ 放入（逐部位口令）→ 关门（连拍微调）
+steps:
+  - name: 先定姿势目标
+    detail: 全身 / 半身 / 坐 / 走；先说清楚要什么画面，再动手摆。
+  - name: 头与眼神
+    detail: 头转角度、下巴高低、注视锚点；口令含方向与幅度（待实践补全细节）。
+  - name: 肩与躯干
+    detail: 肩线开合、胸腔朝向、侧身角度；避免「挺直」这类空词。
+  - name: 手与道具
+    detail: 手无处放时给任务（扶墙/持物/插袋）；写清放哪、力度。
+  - name: 髋、腿、脚
+    detail: 重心落哪条腿、膝弯曲、脚尖朝向；站坐走各有一套（待补）。
+  - name: 连拍后只改一处
+    detail: 每轮只调一个部位，避免一次改全身导致混乱。
+when_to_use: 帮别人拍照、约拍素人、自己对镜练姿势时。
+boundaries: 骨架待亲身带拍多轮后填充；与「机位设置」「素人破冰引导」互补，不互相替代。
+source: 用户主题清单 2026-10-07；可与 communicate-amateur-portrait-coaching / create-on-camera-eye-expression 合流
+status: seed
+tags: [摄影, 姿势, 引导, 待完善]
+updated: "2026-10-07"

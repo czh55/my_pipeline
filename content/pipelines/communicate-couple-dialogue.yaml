@@ -1,0 +1,22 @@
+id: communicate-couple-dialogue
+title: 夫妻沟通（主题占位）
+domain: communicate
+intent: 把夫妻间的高情绪对话，收成可反复练习的章程（结构待实践填充）
+principle: 开门（降升温）→ 放入（说事不说人）→ 关门（约定下一步）
+steps:
+  - name: 先降升温再谈事
+    detail: 情绪过线时先暂停；待补：信号词、暂停规则。
+  - name: 说感受与需求，少贴标签
+    detail: 骨架方向：我观察到…我感到…我需要…（话术待生活中打磨）。
+  - name: 一次只解一个议题
+    detail: 禁止翻旧账串联；议题列表可另约时间。
+  - name: 确认对方听到的版本
+    detail: 复述对方要点后再回应；待补常见卡点。
+  - name: 约定具体下一步
+    detail: 谁、做什么、到何时；没有动作就不算谈完。
+when_to_use: 亲密关系中需要把「吵」变成「谈」时。
+boundaries: 仅占位；无足够共同实践前不升 status。不替代专业咨询。
+source: 用户主题清单 2026-10-07
+status: seed
+tags: [沟通, 夫妻, 待完善]
+updated: "2026-10-07"

@@ -1,0 +1,22 @@
+id: life-coffee-ratio-first
+title: 做咖啡：一切先讲配比（拿铁更吃 pipeline）
+domain: life
+intent: 所有咖啡先用配比说话；拿铁额外强调浓缩→奶泡→融合→出图的完整链路
+principle: 开门（定饮品与配比）→ 放入（按链路执行）→ 关门（品味记录）
+steps:
+  - name: 先写清配比
+    detail: 粉量、液重比、水温、时间、奶量；不写「大概一点」。意式/美式/手冲各有基线（待汇成表）。
+  - name: 美式/浓缩：萃取达标再谈口感形容词
+    detail: 用流速与液重判断，不靠刻度玄学。
+  - name: 拿铁：必须走全链路
+    detail: 浓缩合格 → 奶泡约 65℃ → 融合干净液面 → 出图收流；跳步几乎必翻车。详见 life-home-latte-art-chain。
+  - name: 一次只改一个变量
+    detail: 调磨或改粉量或改时间，三者不同日乱改，否则无法归因。
+  - name: 记录杯表
+    detail: 日期、豆、参数、口感一句话；没有记录就没有山顶总结。
+when_to_use: 家里做咖啡想从「偶尔好喝」变成「可复现好喝」。
+boundaries: 拿铁比美式更依赖 pipeline 纪律；玩具机有上限。已有拉花细链见 life-home-latte-art-chain。
+source: 用户主题清单 2026-10-07；与 video-notes 咖啡簇 / life-home-latte-art-chain 呼应
+status: seed
+tags: [咖啡, 配比, 拿铁, 待完善]
+updated: "2026-10-07"

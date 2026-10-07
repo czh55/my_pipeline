@@ -118,7 +118,7 @@ def page(title: str, active: str, body: str, depth: int = 0) -> str:
 <div class="wrap">
 {nav_html}
 {body}
-<footer>经历 → 章程 → 复用 · 滚雪球沉淀能力</footer>
+<footer>经历 → 章程 → 复用 · 山底上路，山顶沉淀 · 中间必须亲自练</footer>
 </div>
 </body>
 </html>
@@ -167,6 +167,13 @@ def render_index(pipelines: list[dict]) -> str:
   </ol>
 </section>
 
+<section class="warning">
+  <h2 class="section-title">核心警示</h2>
+  <p>Pipeline 说起来往往简单几步，像菜谱一样「一看就会」——但菜谱一直存在，饭的味道却千差万别。你对一条章程的感受有多深，取决于你有多少次真实动手实践。</p>
+  <p class="warn-lead">它最大的价值在<strong>山底</strong>（快速上手）与<strong>山顶</strong>（个人总结）；不能抄近路从山底瞬移到山顶。中间必须亲自练。</p>
+  <p class="more"><a href="principles.html">读完整原则 →</a></p>
+</section>
+
 <section>
   <h2 class="section-title">按领域</h2>
   <div class="grid">{"".join(cards)}</div>
@@ -193,7 +200,12 @@ def render_principles() -> str:
                 out.append("</ul>")
                 in_list = False
             continue  # page title already set
-        if line.startswith("## "):
+        if line.startswith("### "):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h3>{esc(line[4:])}</h3>")
+        elif line.startswith("## "):
             if in_list:
                 out.append("</ul>")
                 in_list = False
@@ -236,7 +248,7 @@ def render_principles() -> str:
 <header class="hero">
   <p class="eyebrow">底层原则</p>
   <h1>步骤与章程</h1>
-  <p>各行业公用的做事原则：先有步骤，再谈熟练与滚雪球。</p>
+  <p>先有步骤，再谈熟练。另请牢记：看懂 pipeline ≠ 会做；山底与山顶有价值，中间必须亲自练。</p>
 </header>
 <article class="prose">
 {"".join(out)}
@@ -406,6 +418,14 @@ a.card:hover { border-color: rgba(232,160,92,0.5); text-decoration: none; transf
   background: linear-gradient(135deg, rgba(232,160,92,0.12), rgba(143,185,168,0.08));
   border: 1px solid var(--border); border-radius: 16px; padding: 22px 18px; margin-bottom: 36px;
 }
+.warning {
+  background: rgba(232,160,92,0.08);
+  border: 1px solid rgba(232,160,92,0.35);
+  border-radius: 16px; padding: 22px 18px; margin-bottom: 36px;
+}
+.warning p { color: var(--muted); margin-bottom: 10px; }
+.warning .warn-lead { color: var(--text); font-family: var(--font-display); font-size: 1.05rem; line-height: 1.5; }
+.warning strong { color: var(--accent); }
 .steps { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .steps.big { gap: 16px; }
 .steps li {
@@ -443,6 +463,7 @@ a.pipe-row:hover { border-color: rgba(232,160,92,0.45); text-decoration: none; }
 }
 .tag.domain { background: rgba(232,160,92,0.12); color: var(--accent); }
 .prose h2 { font-family: var(--font-display); font-size: 1.25rem; margin: 28px 0 10px; }
+.prose h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 18px 0 8px; color: var(--accent); }
 .prose p, .prose li { color: var(--muted); margin-bottom: 10px; }
 .prose ul { margin: 8px 0 12px 1.2rem; }
 .prose blockquote {

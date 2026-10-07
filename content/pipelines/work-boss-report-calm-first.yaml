@@ -1,0 +1,22 @@
+id: work-boss-report-calm-first
+title: 老板汇报：先稳情绪，再按场景走步骤
+domain: work
+intent: 汇报前先摆正「解决问题」姿态，情绪平稳后再进入场景化的 1-2-3
+principle: 开门（稳情绪+姿态）→ 放入（场景步骤）→ 关门（对齐下一步）
+steps:
+  - name: 平稳情绪
+    detail: 开口前先确认：不是辩解场、不是诉苦场；身体放松、语速放慢。
+  - name: 摆正解决问题的姿态
+    detail: 默认站位是「一起把事推进一步」，不是「证明我没错」。
+  - name: 认场景再选模板
+    detail: 例：日常进度 / 坏消息 / 要资源 / 复盘决策…（场景表待补）
+  - name: 场景内走 1-2-3
+    detail: 通用骨架可先用：现状一眼 → 原因/选项 → 我建议的下一步与需要的支持。（各场景细则待写）
+  - name: 结尾对齐动作
+    detail: 确认老板听到的「下一步」和你说的是同一件；记下谁在何时跟进。
+when_to_use: 向上同步、尤其有压力或数据难看时。
+boundaries: 坏数据怎么找亮点见 work-bad-data-highlight-six-steps；本条先解决「人与姿态」，再谈话术结构。
+source: 用户主题清单 2026-10-07
+status: seed
+tags: [职场, 汇报, 情绪, 待完善]
+updated: "2026-10-07"
