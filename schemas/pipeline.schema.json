@@ -18,7 +18,7 @@
     },
     "intent": {
       "type": "string",
-      "description": "这条章程要把什么经历变成可复制结果"
+      "description": "核心价值：这条章程要把什么经历变成可复制结果"
     },
     "principle": {
       "type": "string",
@@ -27,6 +27,7 @@
     "steps": {
       "type": "array",
       "minItems": 2,
+      "description": "山底快速上手：可跟做的有序步骤",
       "items": {
         "type": "object",
         "required": ["name", "detail"],
@@ -34,6 +35,23 @@
         "properties": {
           "name": { "type": "string" },
           "detail": { "type": "string" }
+        }
+      }
+    },
+    "summit": {
+      "type": "string",
+      "description": "山顶深度体悟：实践够了才写得清的手感与判断（可空待填）"
+    },
+    "practice": {
+      "type": "array",
+      "description": "实践踩坑记录，按时间追加",
+      "items": {
+        "type": "object",
+        "required": ["date", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "date": { "type": "string" },
+          "note": { "type": "string" }
         }
       }
     },

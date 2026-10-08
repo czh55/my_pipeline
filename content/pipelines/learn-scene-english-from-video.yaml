@@ -4,19 +4,23 @@ domain: learn
 intent: 把真实情景对话切成可替换说法的场景英译页，用来练嘴而不是做摘要
 principle: 开门（视频）→ 放入（切场景英译）→ 关门（HTML + 可选导入 english-system）
 steps:
-  - name: 收 URL 或出队
-    detail: Webhook / Issue / pending-urls.txt cron 取一条；下载音频与可选视频流。
-  - name: 转录并切 4–12 场景
-    detail: Whisper 后按情景切块；每句 cn/en/note + paraphrase（可替换说法）。
-  - name: 配音与抽帧
-    detail: edge-tts + 场景帧 → docs/audio、docs/images。
-  - name: 生成场景英译页
-    detail: 产出 *-场景英译.html（或以 WORKFLOW 为准的卡片页）；更新 index.json。
-  - name: 发布并可导入学习站
-    detail: push main；需要时 english-system import-from-paraphrase 进入统一学习壳。
+- name: 收 URL 或出队
+  detail: Webhook / Issue / pending-urls.txt cron 取一条；下载音频与可选视频流。
+- name: 转录并切 4–12 场景
+  detail: Whisper 后按情景切块；每句 cn/en/note + paraphrase（可替换说法）。
+- name: 配音与抽帧
+  detail: edge-tts + 场景帧 → docs/audio、docs/images。
+- name: 生成场景英译页
+  detail: 产出 *-场景英译.html（或以 WORKFLOW 为准的卡片页）；更新 index.json。
+- name: 发布并可导入学习站
+  detail: push main；需要时 english-system import-from-paraphrase 进入统一学习壳。
+practice: []
 when_to_use: 目标是「下场能开口」，而不是「看懂视频讲了什么」。
 boundaries: 与 video-notes 双轨总结分流——本条不做理性分析长图；语料少时先积卡再导入系统。
 source: language_paraphrase WORKFLOW；video-notes 场景英译支路；english-system 消费层
 status: draft
-tags: [英语, 场景, paraphrase]
-updated: "2026-10-07"
+tags:
+- 英语
+- 场景
+- paraphrase
+updated: '2026-10-07'

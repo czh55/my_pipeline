@@ -1,0 +1,36 @@
+# 复制本文件到 content/pipelines/<id>.yaml 后填写。
+# 核心警示（全项目共用，不必每条重复长文）：
+#   Pipeline 像菜谱——一看就会，味道差在动手次数。
+#   价值在山底上路与山顶总结；中间必须亲自练。
+
+id: example-theme-id          # kebab-case，唯一
+title: 主题名称 Pipeline
+domain: life                  # meta|life|work|learn|create|communicate
+intent: 这条章程解决什么问题（核心价值，一句话）
+principle: 开门 → 放入 → 关门   # 可选心法
+
+# —— 山底：快速上手（看完就能跟做）——
+steps:
+  - name: 步骤一
+    detail: 可执行动作，不是形容词
+  - name: 步骤二
+    detail: …
+  - name: 步骤三
+    detail: …
+
+# —— 山顶：深度体悟（练过才懂，可留空待填）——
+summit: |
+  实践够了之后才写得清楚的细微差别、手感、判断标准。
+  seed/draft 阶段可写「待实践填充」。
+
+# —— 实践踩坑记录（按时间追加）——
+practice:
+  - date: "2026-10-08"
+    note: 第一次照做时翻在哪里、改了哪一步
+
+when_to_use: 什么情况下启用
+boundaries: 什么情况下不要硬套
+source: 经验来源 / 日期 / 参考
+status: seed                  # seed|draft|validated|snowball
+tags: [待完善]
+updated: "2026-10-08"

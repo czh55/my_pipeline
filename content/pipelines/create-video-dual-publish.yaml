@@ -4,19 +4,24 @@ domain: create
 intent: 把 B 站 / 小红书视频沉淀成可回看的图文实录，同时产出可行动的结构化分析
 principle: 开门（取证下载）→ 放入（转录双轨编辑）→ 关门（索引 + main Pages）
 steps:
-  - name: 收链接并识别平台
-    detail: Webhook / 手工拿到 url+date；detect-platform；查 index.json 去重，已处理则停。
-  - name: 限流下载音视频
-    detail: B 站用 yt-dlp；小红书用 xhs-fetch + 全局限流（≥60s），禁止探测式连环请求。
-  - name: Whisper 全量转录
-    detail: 优先 medium；读完全部 segments，不以标题/前 30 秒代替证据。
-  - name: 双轨编辑与配图
-    detail: 同证分叉——HTML 按时序纪实+截图图注；SVG 重组论点/边界/行动清单；简体中文为主。
-  - name: 更新索引并合入 main
-    detail: 写 docs 产物与 index.json；开发分支提交后必须 merge 并 push main（Pages 只认 main）。
+- name: 收链接并识别平台
+  detail: Webhook / 手工拿到 url+date；detect-platform；查 index.json 去重，已处理则停。
+- name: 限流下载音视频
+  detail: B 站用 yt-dlp；小红书用 xhs-fetch + 全局限流（≥60s），禁止探测式连环请求。
+- name: Whisper 全量转录
+  detail: 优先 medium；读完全部 segments，不以标题/前 30 秒代替证据。
+- name: 双轨编辑与配图
+  detail: 同证分叉——HTML 按时序纪实+截图图注；SVG 重组论点/边界/行动清单；简体中文为主。
+- name: 更新索引并合入 main
+  detail: 写 docs 产物与 index.json；开发分支提交后必须 merge 并 push main（Pages 只认 main）。
+practice: []
 when_to_use: 想把一条短视频/教学视频变成「能重看 + 能照做」的知识资产时。
 boundaries: 不是场景英译流水线（那是 language_paraphrase）；修旧文默认不重抓小红书；能力不足时宁留草稿不发残缺页。
 source: video-notes WORKFLOW；daily-hub 客厅 · Bilibili Workshow；本机约 945 条索引
 status: snowball
-tags: [视频, Whisper, GitHub-Pages, 高频]
-updated: "2026-10-07"
+tags:
+- 视频
+- Whisper
+- GitHub-Pages
+- 高频
+updated: '2026-10-07'

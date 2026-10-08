@@ -4,19 +4,23 @@ domain: life
 intent: 把一次真实出行规划做成可离线打开的 HTML 行程方案，并挂进门户
 principle: 开门（问清硬约束）→ 放入（建模调研本地化）→ 关门（实测归档入库）
 steps:
-  - name: 问清硬约束
-    detail: 出发地、目的地、时间窗、返程死线、预算档；返程日是倒排锚点，未齐不动手。
-  - name: 倒排建模
-    detail: 从返程日往前排：返程→核心活动→适应期→去程；拼假策略写清请假天数。
-  - name: 调研并本地化资源
-    detail: 交通/门票/住宿/费用成表；图片、字体、地图库全部下载进仓，不依赖 CDN。
-  - name: 生成交互 HTML
-    detail: 章节骨架 + Leaflet 地图 + 预算三档 + 备选方案；数据驱动可用 build_guide.py。
-  - name: 浏览器实测并收录
-    detail: 手机可读性与离线打开自检；写入 guides.json，门户卡片自动出现。
+- name: 问清硬约束
+  detail: 出发地、目的地、时间窗、返程死线、预算档；返程日是倒排锚点，未齐不动手。
+- name: 倒排建模
+  detail: 从返程日往前排：返程→核心活动→适应期→去程；拼假策略写清请假天数。
+- name: 调研并本地化资源
+  detail: 交通/门票/住宿/费用成表；图片、字体、地图库全部下载进仓，不依赖 CDN。
+- name: 生成交互 HTML
+  detail: 章节骨架 + Leaflet 地图 + 预算三档 + 备选方案；数据驱动可用 build_guide.py。
+- name: 浏览器实测并收录
+  detail: 手机可读性与离线打开自检；写入 guides.json，门户卡片自动出现。
+practice: []
 when_to_use: 要做一趟说得清、走得动、回来还能改的旅行方案时（阳台/旅行场景）。
 boundaries: 不是景点百科堆砌；没有出发/返程约束时先别生成漂亮空壳。
 source: tour_map WORKFLOW；daily-hub 阳台；guides.json 约 112 篇
 status: validated
-tags: [旅行, HTML, 本地化]
-updated: "2026-10-07"
+tags:
+- 旅行
+- HTML
+- 本地化
+updated: '2026-10-07'

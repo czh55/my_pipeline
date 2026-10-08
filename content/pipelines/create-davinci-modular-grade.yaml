@@ -4,19 +4,25 @@ domain: create
 intent: 把「改一处全乱、凭感觉」变成可测量、可复位的调色流程
 principle: 开门（分节点）→ 放入（示波器校准）→ 关门（矢量检查+复位）
 steps:
-  - name: 一类调整一个节点
-    detail: 还原/白平衡/曝光/风格分节点；整体用串行，局部选区用并行，避免污染。
-  - name: 波形校准黑白点
-    detail: Log 素材先用波形图校准黑白点；色轮先定阴影与高光两头再动中间调。
-  - name: 白平衡点「该白」的区域
-    detail: 优先吸管点本应为白的区域；中间调细节约 20–30，避免拉高发脏晕。
-  - name: 对比度与轴心配套
-    detail: 对比度与轴心点一起调；曲线/RGB 分通道做校正。
-  - name: 矢量图查肤色与溢出
-    detail: 肤色沿指示线，信号勿顶外圈；改乱则用分级复位，前后对比用 Shift+D。
+- name: 一类调整一个节点
+  detail: 还原/白平衡/曝光/风格分节点；整体用串行，局部选区用并行，避免污染。
+- name: 波形校准黑白点
+  detail: Log 素材先用波形图校准黑白点；色轮先定阴影与高光两头再动中间调。
+- name: 白平衡点「该白」的区域
+  detail: 优先吸管点本应为白的区域；中间调细节约 20–30，避免拉高发脏晕。
+- name: 对比度与轴心配套
+  detail: 对比度与轴心点一起调；曲线/RGB 分通道做校正。
+- name: 矢量图查肤色与溢出
+  detail: 肤色沿指示线，信号勿顶外圈；改乱则用分级复位，前后对比用 Shift+D。
+practice: []
 when_to_use: 有达芬奇与可调/Log 素材，需要可复现的成片色时。
 boundaries: 不是手机一键美颜替代品；快速仿色还需分区/遮罩清单，勿全局一把梭对比。
-source: video-notes · davinci-coloring / davinci-node-system / zone-grade-fast-match；color-grade 约 83
+source: video-notes · davinci-coloring / davinci-node-system / zone-grade-fast-match；color-grade
+  约 83
 status: validated
-tags: [达芬奇, 调色, 视频, video-notes]
-updated: "2026-10-07"
+tags:
+- 达芬奇
+- 调色
+- 视频
+- video-notes
+updated: '2026-10-07'

@@ -35,18 +35,18 @@ my_pipeline/
 
 ## 一条 pipeline 长什么样
 
-见 `schemas/pipeline.schema.json`。最小字段：
+标准模板见 `content/TEMPLATE.yaml`，字段约定见 `schemas/pipeline.schema.json`。
 
-| 字段 | 含义 |
-|------|------|
-| `id` | 唯一标识 |
-| `title` | 标题 |
-| `domain` | `life` / `work` / `learn` / `create` / `communicate` / `meta` |
-| `intent` | 这条章程解决什么 |
-| `steps[]` | 有序步骤（name + detail） |
-| `status` | `seed` / `draft` / `validated` / `snowball` |
+| 区块 | 字段 | 含义 |
+|------|------|------|
+| 核心价值 | `intent` | 解决什么问题 |
+| **山底** | `steps[]` | 快速上手：可跟做的 1-2-3 |
+| **山顶** | `summit` | 深度体悟：练过才写得清（可空） |
+| **踩坑** | `practice[]` | 实践记录：`date` + `note` |
+| 适用/边界 | `when_to_use` / `boundaries` | 何时用、何时别硬套 |
+| 状态 | `status` | `seed` / `draft` / `validated` / `snowball` |
 
-`seed` = 主题已记下、骨架待实践填充；不等于已经会做。
+`seed` = 主题已记下、骨架待实践填充；不等于已经会做。易学错觉警示见 `content/principles.md`。
 
 ## 快速开始
 

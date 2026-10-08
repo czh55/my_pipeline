@@ -309,6 +309,22 @@ def render_pipeline_detail(p: dict) -> str:
     if p.get("updated"):
         meta_bits.append(f'<span class="muted">{esc(p["updated"])}</span>')
 
+    summit = (p.get("summit") or "").strip()
+    summit_html = (
+        f"<p>{esc(summit)}</p>"
+        if summit
+        else '<p class="muted">待实践填充——山顶体悟只在练过之后写，不在看懂步骤时编。</p>'
+    )
+
+    practice_items = p.get("practice") or []
+    if practice_items:
+        practice_html = "<ul>" + "".join(
+            f"<li><strong>{esc(item.get('date', ''))}</strong> — {esc(item.get('note', ''))}</li>"
+            for item in practice_items
+        ) + "</ul>"
+    else:
+        practice_html = '<p class="muted">尚无踩坑记录。每练一轮，在 YAML 的 practice 里追加一行 date + note。</p>'
+
     extras = []
     if p.get("principle"):
         extras.append(f"<h2>心法</h2><p class=\"principle\">{esc(p['principle'])}</p>")
@@ -317,7 +333,7 @@ def render_pipeline_detail(p: dict) -> str:
     if p.get("boundaries"):
         extras.append(f"<h2>边界</h2><p>{esc(p['boundaries'])}</p>")
     if p.get("source"):
-        extras.append(f"<h2>来源</h2><p>{esc(p['source'])}</p>")
+        extras.append(f"<h2>来源 / 参考</h2><p>{esc(p['source'])}</p>")
 
     body = f"""
 <header class="hero">
@@ -326,9 +342,21 @@ def render_pipeline_detail(p: dict) -> str:
   <p>{esc(p["intent"])}</p>
   <div class="meta-row">{"".join(meta_bits)}{tags}</div>
 </header>
+<section class="warning compact">
+  <p class="warn-lead">易学错觉：看懂步骤 ≠ 会做。价值在山底上路与山顶总结；中间必须亲自练。
+  <a href="../principles.html">原则全文</a></p>
+</section>
 <section>
-  <h2 class="section-title">步骤</h2>
+  <h2 class="section-title">山底 · 快速上手</h2>
   <ol class="steps">{"".join(steps)}</ol>
+</section>
+<section class="prose stage">
+  <h2 class="section-title">山顶 · 深度体悟</h2>
+  {summit_html}
+</section>
+<section class="prose stage">
+  <h2 class="section-title">实践踩坑</h2>
+  {practice_html}
 </section>
 <article class="prose extras">
 {"".join(extras)}
@@ -425,7 +453,10 @@ a.card:hover { border-color: rgba(232,160,92,0.5); text-decoration: none; transf
 }
 .warning p { color: var(--muted); margin-bottom: 10px; }
 .warning .warn-lead { color: var(--text); font-family: var(--font-display); font-size: 1.05rem; line-height: 1.5; }
+.warning.compact { padding: 14px 16px; margin-bottom: 28px; }
+.warning.compact .warn-lead { font-size: 0.95rem; margin: 0; }
 .warning strong { color: var(--accent); }
+.stage { margin: 28px 0; padding-top: 8px; border-top: 1px solid var(--border); }
 .steps { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .steps.big { gap: 16px; }
 .steps li {

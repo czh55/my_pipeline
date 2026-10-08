@@ -4,19 +4,24 @@ domain: create
 intent: 把已下载的一集电视剧变成可检索的图文剧情回顾（情节/台词/人物/伏笔）
 principle: 开门（本地视频）→ 放入（转录切场景）→ 关门（HTML + 索引 push）
 steps:
-  - name: 锁定剧集与文件
-    detail: 确认 drama / episode / 本地 mp4 路径；维护 cast.md（演员与角色）。
-  - name: 转录并切关键场景
-    detail: faster-whisper / Whisper 出 JSON；按地点·事件·情绪切 8–12 场景，写叙述与关键台词。
-  - name: 抽帧与台词英译配音
-    detail: ffmpeg 按场景时间抽帧；台词补 EN；必要时 edge-tts 生成引用朗读。
-  - name: 渲染单集 HTML
-    detail: 产出含梗概/情节/人物/看点/伏笔/启示的单文件页，资源进 docs/images。
-  - name: 校验索引并发布
-    detail: validate → 更新 index.json / 搜索索引 → commit docs+content → push main。云 Agent 只负责索引推送，不读本地盘。
+- name: 锁定剧集与文件
+  detail: 确认 drama / episode / 本地 mp4 路径；维护 cast.md（演员与角色）。
+- name: 转录并切关键场景
+  detail: faster-whisper / Whisper 出 JSON；按地点·事件·情绪切 8–12 场景，写叙述与关键台词。
+- name: 抽帧与台词英译配音
+  detail: ffmpeg 按场景时间抽帧；台词补 EN；必要时 edge-tts 生成引用朗读。
+- name: 渲染单集 HTML
+  detail: 产出含梗概/情节/人物/看点/伏笔/启示的单文件页，资源进 docs/images。
+- name: 校验索引并发布
+  detail: validate → 更新 index.json / 搜索索引 → commit docs+content → push main。云 Agent 只负责索引推送，不读本地盘。
+practice: []
 when_to_use: 追剧后想留下「下周还记得发生了什么」的回顾资产时。
 boundaries: 视频不入库；无本地片源不要硬跑；半自动时人工完成转录编辑再触发 push。
 source: drama-analysis WORKFLOW；daily-hub 客厅；本机约 487 集总结
 status: snowball
-tags: [剧集, Whisper, 追剧, 高频]
-updated: "2026-10-07"
+tags:
+- 剧集
+- Whisper
+- 追剧
+- 高频
+updated: '2026-10-07'

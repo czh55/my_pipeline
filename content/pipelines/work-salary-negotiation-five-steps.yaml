@@ -4,19 +4,24 @@ domain: work
 intent: 把压价从自我怀疑转为可对齐、可论证、可落口的谈判
 principle: 开门（对齐结构）→ 放入（论证期望）→ 关门（申请与折中）
 steps:
-  - name: 追问薪资结构
-    detail: 先对齐年薪/月薪、税前税后、12/14 薪等口径，再谈数字。
-  - name: 拆穿定薪理由
-    detail: 能力短板、薪资体系、空头支票、性价比等视为流程话术，勿立刻自我否定。
-  - name: 坚定期望并给理由
-    detail: 用胜任度、过往亮点、面试正向反馈论证期望薪资。
-  - name: 请 HR 向上申请
-    detail: 传递诚意、稳定性、其他 offer 等动力，推动对方走流程。
-  - name: 折中出口
-    detail: 期望定为转正薪资，试用期不低于约 80%（极刚性体系可能仍不适用）。
+- name: 追问薪资结构
+  detail: 先对齐年薪/月薪、税前税后、12/14 薪等口径，再谈数字。
+- name: 拆穿定薪理由
+  detail: 能力短板、薪资体系、空头支票、性价比等视为流程话术，勿立刻自我否定。
+- name: 坚定期望并给理由
+  detail: 用胜任度、过往亮点、面试正向反馈论证期望薪资。
+- name: 请 HR 向上申请
+  detail: 传递诚意、稳定性、其他 offer 等动力，推动对方走流程。
+- name: 折中出口
+  detail: 期望定为转正薪资，试用期不低于约 80%（极刚性体系可能仍不适用）。
+practice: []
 when_to_use: 社招谈薪、HR 当场压价阶段。
 boundaries: 不含简历与技术面全流程准备；谈不拢时仍要有自己的底线与退出条件。
-source: video-notes · salary-negotiation-five-steps；可与 big-tech-interview-guide 谈薪段互补；workplace 约 102
+source: video-notes · salary-negotiation-five-steps；可与 big-tech-interview-guide 谈薪段互补；workplace
+  约 102
 status: validated
-tags: [职场, 谈薪, video-notes]
-updated: "2026-10-07"
+tags:
+- 职场
+- 谈薪
+- video-notes
+updated: '2026-10-07'
