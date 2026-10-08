@@ -16,24 +16,12 @@
   <p>用日历驱动，每天稳定产出一页可学内容（算法 / 歌词等），绝不发占位残页</p>
   <div class="meta-row"><span class="status s-snowball">滚雪球</span><span class="tag domain">学习</span><span class="muted">2026-10-07</span><span class="tag">日更</span><span class="tag">Automation</span><span class="tag">算法</span><span class="tag">歌词</span><span class="tag">高频</span></div>
 </header>
-<section class="warning compact">
-  <p class="warn-lead">易学错觉：看懂步骤 ≠ 会做。价值在山底上路与山顶总结；中间必须亲自练。
-  <a href="../principles.html">原则全文</a></p>
-</section>
 <section>
-  <h2 class="section-title">山底 · 快速上手</h2>
+  <h2 class="section-title">步骤</h2>
   <ol class="steps"><li><span class="n">1</span><div><strong>跑选题脚本</strong><p>algo：generate.py --bank；lyric：generate.py --prepare；读写 history 保证去重轮换。</p></div></li><li><span class="n">2</span><div><strong>按方法论补齐内容</strong><p>算法走变量语义法（认型→三句→落码）；歌词按 lyric-learning-prompt 逐句精讲；缺精讲则 Agent 补全后再 --force。</p></div></li><li><span class="n">3</span><div><strong>可选语音</strong><p>edge-tts 生成当日讲解音频，挂到页面可播。</p></div></li><li><span class="n">4</span><div><strong>强制校验</strong><p>check_pages / finalize；algo 禁止日常 --allow-auto 占位页上线。</p></div></li><li><span class="n">5</span><div><strong>提交日更</strong><p>更新 index、archive/lessons、history；commit 信息用 daily: YYYY-MM-DD → push main → 打开站点确认。</p></div></li></ol>
 </section>
-<section class="prose stage">
-  <h2 class="section-title">山顶 · 深度体悟</h2>
-  <p class="muted">待实践填充——山顶体悟只在练过之后写，不在看懂步骤时编。</p>
-</section>
-<section class="prose stage">
-  <h2 class="section-title">实践踩坑</h2>
-  <p class="muted">尚无踩坑记录。每练一轮，在 YAML 的 practice 里追加一行 date + note。</p>
-</section>
 <article class="prose extras">
-<h2>心法</h2><p class="principle">开门（脚本选题）→ 放入（按模板写精讲）→ 关门（check + push main）</p><h2>何时使用</h2><p>书房日课——需要「每天都有一页」的长期能力滚雪球时。</p><h2>边界</h2><p>与 Webhook 媒体流水线不同；内容质量门禁优先于准时——写不出完整精讲就当天停更，不发空壳。</p><h2>来源 / 参考</h2><p>daily-algo（≈66 天, cron 08:00）+ daily-lyric-learning（≈72 课, cron 08:00）+ daily-photos 同构壳</p>
+<h2>心法</h2><p class="principle">开门（脚本选题）→ 放入（按模板写精讲）→ 关门（check + push main）</p><h2>何时使用</h2><p>书房日课——需要「每天都有一页」的长期能力滚雪球时。</p><h2>边界</h2><p>与 Webhook 媒体流水线不同；内容质量门禁优先于准时——写不出完整精讲就当天停更，不发空壳。</p><h2>来源</h2><p>daily-algo（≈66 天, cron 08:00）+ daily-lyric-learning（≈72 课, cron 08:00）+ daily-photos 同构壳</p>
 </article>
 <p class="more"><a href="index.html">← 全部章程</a></p>
 

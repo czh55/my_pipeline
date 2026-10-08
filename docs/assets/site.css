@@ -81,10 +81,7 @@ a.card:hover { border-color: rgba(232,160,92,0.5); text-decoration: none; transf
 }
 .warning p { color: var(--muted); margin-bottom: 10px; }
 .warning .warn-lead { color: var(--text); font-family: var(--font-display); font-size: 1.05rem; line-height: 1.5; }
-.warning.compact { padding: 14px 16px; margin-bottom: 28px; }
-.warning.compact .warn-lead { font-size: 0.95rem; margin: 0; }
 .warning strong { color: var(--accent); }
-.stage { margin: 28px 0; padding-top: 8px; border-top: 1px solid var(--border); }
 .steps { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .steps.big { gap: 16px; }
 .steps li {

@@ -112,6 +112,13 @@
     "steps": 5
   },
   {
+    "id": "meta-enter-new-domain-with-ai",
+    "title": "快速进入新领域：AI 出草案 → 实践 → 按实情改 pipeline",
+    "domain": "meta",
+    "status": "draft",
+    "steps": 3
+  },
+  {
     "id": "meta-write-pipeline",
     "title": "如何把一次经历写成 pipeline",
     "domain": "meta",
