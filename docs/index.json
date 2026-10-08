@@ -119,6 +119,13 @@
     "steps": 5
   },
   {
+    "id": "work-sudden-demand-slot-park",
+    "title": "应对突发需求：先稳 → 槽内存档 → 事后补齐",
+    "domain": "work",
+    "status": "draft",
+    "steps": 5
+  },
+  {
     "id": "communicate-couple-dialogue",
     "title": "夫妻沟通（主题占位）",
     "domain": "communicate",
