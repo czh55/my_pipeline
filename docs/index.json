@@ -105,6 +105,20 @@
     "steps": 5
   },
   {
+    "id": "create-mixed-media-doc-finish",
+    "title": "混媒纪录片收尾：配乐过渡 → 余韵结尾 → 统一色调",
+    "domain": "create",
+    "status": "draft",
+    "steps": 5
+  },
+  {
+    "id": "create-pregnancy-newborn-doc",
+    "title": "孕期→出生纪录片：定气质 → 必拍清单 → 锚点成片",
+    "domain": "create",
+    "status": "draft",
+    "steps": 7
+  },
+  {
     "id": "learn-scene-english-from-video",
     "title": "视频场景 → 中英对照开口卡",
     "domain": "learn",
