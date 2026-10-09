@@ -8,22 +8,6 @@
     "steps": 5
   },
   {
-    "id": "create-davinci-modular-grade",
-    "title": "达芬奇模块化调色：一节点一类调整",
-    "domain": "create",
-    "status": "validated",
-    "origin": "self",
-    "steps": 5
-  },
-  {
-    "id": "create-mobile-hsl-skin-rescue",
-    "title": "手机剪辑救黑黄皮：全局 → HSL 橙 → 塑形",
-    "domain": "create",
-    "status": "validated",
-    "origin": "self",
-    "steps": 5
-  },
-  {
     "id": "create-mobile-portrait-composition",
     "title": "手机单人出片：机位高度 + 距离 + 网格",
     "domain": "create",
