@@ -62,7 +62,12 @@
     },
     "source": {
       "type": "string",
-      "description": "经验来源：场景、日期、人或项目"
+      "description": "经验来源说明：场景、日期、人或项目；拿来主义时写出处"
+    },
+    "origin": {
+      "type": "string",
+      "enum": ["self", "borrowed"],
+      "description": "自己定义（self）或拿来主义（borrowed）"
     },
     "status": {
       "type": "string",

@@ -1,0 +1,25 @@
+id: meta-unhappy-then-pipeline
+title: 不开心遇新问题就总结新 pipeline
+domain: meta
+intent: 把「不开心 + 新问题」变成开凿新章程的触发器，而不是只抱怨
+principle: 当前状态不开心遇到了新的问题，就一定有新的pipeline需要总结。
+origin: self
+steps:
+  - name: 捕捉信号
+    detail: 记下此刻不开心的状态，以及新出现的具体问题（谁、什么场景、卡在哪一步）。
+  - name: 检索能否并入
+    detail: 先在本库搜是否已有同类 pipeline；能并入就追加 practice / 改 steps，不要盲目新建。
+  - name: 抽出山底步骤
+    detail: 若无可并入，按 meta-write-pipeline 写新 YAML：intent、可跟做的 steps、when_to_use、boundaries；标明 origin（自己定义 / 拿来主义）。
+  - name: 指向山顶
+    detail: 提醒自己：这条章程服务于「我有信心能够处理好生活中的各种事情」；summit 未练勿编。
+practice: []
+when_to_use: 当前状态不开心，又遇到了以前章程盖不住的新问题。
+boundaries: 情绪波动但没有新问题类型时，先用已有心态/沟通类 pipeline，不必强行开新山。
+source: 自己定义 · 2026-10-09 · 自 plan_100 宪章讨论迁入
+status: draft
+tags:
+  - meta
+  - 触发
+  - 自己定义
+updated: "2026-10-09"

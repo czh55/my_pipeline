@@ -30,7 +30,8 @@ practice:
 
 when_to_use: 什么情况下启用
 boundaries: 什么情况下不要硬套
-source: 经验来源 / 日期 / 参考
+origin: self                  # self=自己定义 | borrowed=拿来主义
+source: 经验来源 / 日期 / 参考（borrowed 时必写出处）
 status: seed                  # seed|draft|validated|snowball
 tags: [待完善]
 updated: "2026-10-08"

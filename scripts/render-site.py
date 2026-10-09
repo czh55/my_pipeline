@@ -33,6 +33,11 @@ STATUS_LABEL = {
     "snowball": "滚雪球",
 }
 
+ORIGIN_LABEL = {
+    "self": "自己定义",
+    "borrowed": "拿来主义",
+}
+
 REQUIRED = ("id", "title", "domain", "intent", "steps", "status")
 
 
@@ -45,6 +50,7 @@ def load_pipelines() -> list[dict]:
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
     domains = set(schema["properties"]["domain"]["enum"])
     statuses = set(schema["properties"]["status"]["enum"])
+    origins = set(schema["properties"]["origin"]["enum"])
 
     pipelines: list[dict] = []
     seen: set[str] = set()
@@ -62,6 +68,12 @@ def load_pipelines() -> list[dict]:
             fail(path, f"invalid domain: {data['domain']}")
         if data["status"] not in statuses:
             fail(path, f"invalid status: {data['status']}")
+        origin = data.get("origin") or "self"
+        if origin not in origins:
+            fail(path, f"invalid origin: {origin}")
+        data["origin"] = origin
+        if origin == "borrowed" and not (data.get("source") or "").strip():
+            fail(path, "borrowed pipeline needs source (出处)")
         steps = data["steps"]
         if not isinstance(steps, list) or len(steps) < 2:
             fail(path, "steps must be a list with at least 2 items")
@@ -148,6 +160,7 @@ def render_index(pipelines: list[dict]) -> str:
             f'<span class="num">{esc(DOMAIN_LABEL.get(p["domain"], p["domain"]))}</span>'
             f"<div><strong>{esc(p['title'])}</strong>"
             f'<p class="muted">{esc(p["intent"])}</p></div>'
+            f'<span class="tag origin o-{esc(p.get("origin") or "self")}">{esc(ORIGIN_LABEL.get(p.get("origin") or "self", "自己定义"))}</span>'
             f'<span class="status s-{esc(p["status"])}">{esc(STATUS_LABEL[p["status"]])}</span>'
             f"</a>"
         )
@@ -156,7 +169,8 @@ def render_index(pipelines: list[dict]) -> str:
 <header class="hero">
   <p class="eyebrow">经验章程库</p>
   <h1>my_pipeline</h1>
-  <p>把大象放进冰箱：开门、放入、关门。背后是人生与工作共用的底层原则——做事都有步骤和章程。本站把你的经历写成可复制的 pipeline，像滚雪球一样丰富能力。</p>
+  <p class="north-star">我有信心能够处理好生活中的各种事情。</p>
+  <p>把大象放进冰箱：开门、放入、关门。背后是人生与工作共用的底层原则——做事都有步骤和章程。不开心遇到新问题，就总结（或并入）一条新 pipeline。</p>
 </header>
 
 <section class="metaphor">
@@ -271,6 +285,7 @@ def render_pipeline_list(pipelines: list[dict]) -> str:
                 f'<span class="num">{len(p["steps"])} 步</span>'
                 f"<div><strong>{esc(p['title'])}</strong>"
                 f'<p class="muted">{esc(p["intent"])}</p></div>'
+                f'<span class="tag origin o-{esc(p.get("origin") or "self")}">{esc(ORIGIN_LABEL.get(p.get("origin") or "self", "自己定义"))}</span>'
                 f'<span class="status s-{esc(p["status"])}">{esc(STATUS_LABEL[p["status"]])}</span>'
                 f"</a>"
             )
@@ -302,9 +317,11 @@ def render_pipeline_detail(p: dict) -> str:
         )
 
     tags = "".join(f'<span class="tag">{esc(t)}</span>' for t in p.get("tags") or [])
+    origin = p.get("origin") or "self"
     meta_bits = [
         f'<span class="status s-{esc(p["status"])}">{esc(STATUS_LABEL[p["status"]])}</span>',
         f'<span class="tag domain">{esc(DOMAIN_LABEL.get(p["domain"], p["domain"]))}</span>',
+        f'<span class="tag origin o-{esc(origin)}">{esc(ORIGIN_LABEL.get(origin, origin))}</span>',
     ]
     if p.get("updated"):
         meta_bits.append(f'<span class="muted">{esc(p["updated"])}</span>')
@@ -332,6 +349,11 @@ def render_pipeline_detail(p: dict) -> str:
         extras.append(f"<h2>何时使用</h2><p>{esc(p['when_to_use'])}</p>")
     if p.get("boundaries"):
         extras.append(f"<h2>边界</h2><p>{esc(p['boundaries'])}</p>")
+    extras.append(
+        f"<h2>来源类型</h2><p>{esc(ORIGIN_LABEL.get(origin, origin))}"
+        + ("（须注明出处）" if origin == "borrowed" else "")
+        + "</p>"
+    )
     if p.get("source"):
         extras.append(f"<h2>来源 / 参考</h2><p>{esc(p['source'])}</p>")
 
@@ -418,6 +440,10 @@ nav.top a.active { color: var(--accent); }
   letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 14px;
 }
 .hero p { color: var(--muted); max-width: 40rem; }
+.hero p.north-star {
+  color: var(--text); font-family: var(--font-display); font-size: 1.15rem;
+  margin: 0 0 12px; max-width: 36rem;
+}
 .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 16px; }
 .section-title {
   font-family: var(--font-display);
@@ -493,6 +519,8 @@ a.pipe-row:hover { border-color: rgba(232,160,92,0.45); text-decoration: none; }
   background: rgba(143,185,168,0.12); color: var(--accent2); margin-right: 4px;
 }
 .tag.domain { background: rgba(232,160,92,0.12); color: var(--accent); }
+.tag.origin.o-self { background: rgba(143,185,168,0.18); color: var(--accent2); }
+.tag.origin.o-borrowed { background: rgba(120,150,200,0.18); color: #9bb4d4; }
 .prose h2 { font-family: var(--font-display); font-size: 1.25rem; margin: 28px 0 10px; }
 .prose h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 18px 0 8px; color: var(--accent); }
 .prose p, .prose li { color: var(--muted); margin-bottom: 10px; }
@@ -541,6 +569,7 @@ def main() -> None:
             "title": p["title"],
             "domain": p["domain"],
             "status": p["status"],
+            "origin": p.get("origin") or "self",
             "steps": len(p["steps"]),
         }
         for p in pipelines
