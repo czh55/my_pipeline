@@ -560,8 +560,13 @@ def main() -> None:
     (DOCS / "index.html").write_text(render_index(pipelines), encoding="utf-8")
     (DOCS / "principles.html").write_text(render_principles(), encoding="utf-8")
     (PIPE_DIR / "index.html").write_text(render_pipeline_list(pipelines), encoding="utf-8")
+    keep_html = {"index.html"} | {f"{p['id']}.html" for p in pipelines}
     for p in pipelines:
         (PIPE_DIR / f"{p['id']}.html").write_text(render_pipeline_detail(p), encoding="utf-8")
+    for stale in PIPE_DIR.glob("*.html"):
+        if stale.name not in keep_html:
+            stale.unlink()
+            print(f"removed stale {stale.relative_to(ROOT)}")
 
     index_json = [
         {

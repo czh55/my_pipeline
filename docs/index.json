@@ -1,45 +1,5 @@
 [
   {
-    "id": "create-drama-episode-recap",
-    "title": "本地剧集 → 一集剧情总结站",
-    "domain": "create",
-    "status": "snowball",
-    "origin": "self",
-    "steps": 5
-  },
-  {
-    "id": "create-video-dual-publish",
-    "title": "视频链接 → 双轨发布（实录 HTML + 理性 SVG）",
-    "domain": "create",
-    "status": "snowball",
-    "origin": "self",
-    "steps": 5
-  },
-  {
-    "id": "learn-daily-agent-pages",
-    "title": "日更学习页：选题 → Agent 精讲 → 校验 → Pages",
-    "domain": "learn",
-    "status": "snowball",
-    "origin": "self",
-    "steps": 5
-  },
-  {
-    "id": "learn-podcast-deep-summary",
-    "title": "小宇宙播客 → 深度总结 SVG 站",
-    "domain": "learn",
-    "status": "snowball",
-    "origin": "self",
-    "steps": 5
-  },
-  {
-    "id": "life-home-latte-art-chain",
-    "title": "居家拉花全链路：浓缩 → 奶泡 → 融合 → 出图",
-    "domain": "life",
-    "status": "snowball",
-    "origin": "self",
-    "steps": 5
-  },
-  {
     "id": "communicate-amateur-portrait-coaching",
     "title": "素人人像引导：四维口令片场",
     "domain": "communicate",
@@ -80,28 +40,12 @@
     "steps": 5
   },
   {
-    "id": "create-travel-guide",
-    "title": "一次旅行 → 单文件可视化攻略",
-    "domain": "life",
-    "status": "validated",
-    "origin": "self",
-    "steps": 5
-  },
-  {
     "id": "life-freestyle-relaxed-distance",
     "title": "自由泳省力远游：腿位 → 划程 → 侧换气",
     "domain": "life",
     "status": "validated",
     "origin": "self",
     "steps": 5
-  },
-  {
-    "id": "life-hub-daily-aggregate",
-    "title": "Daily Hub 日聚合：抓子站 → feed → 房子侧栏",
-    "domain": "life",
-    "status": "validated",
-    "origin": "self",
-    "steps": 4
   },
   {
     "id": "work-bad-data-highlight-six-steps",
@@ -134,14 +78,6 @@
     "status": "draft",
     "origin": "self",
     "steps": 7
-  },
-  {
-    "id": "learn-scene-english-from-video",
-    "title": "视频场景 → 中英对照开口卡",
-    "domain": "learn",
-    "status": "draft",
-    "origin": "self",
-    "steps": 5
   },
   {
     "id": "meta-enter-new-domain-with-ai",
