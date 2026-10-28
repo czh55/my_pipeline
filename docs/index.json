@@ -64,6 +64,14 @@
     "steps": 7
   },
   {
+    "id": "life-cook-done-then-season",
+    "title": "做饭：先做熟，再调味",
+    "domain": "life",
+    "status": "draft",
+    "origin": "self",
+    "steps": 2
+  },
+  {
     "id": "meta-enter-new-domain-with-ai",
     "title": "快速进入新领域：AI 出草案 → 实践 → 按实情改 pipeline",
     "domain": "meta",
@@ -110,6 +118,14 @@
     "status": "draft",
     "origin": "self",
     "steps": 5
+  },
+  {
+    "id": "work-weekday-afternoon-own-pace",
+    "title": "工作日下午：自己控节奏，插课间",
+    "domain": "work",
+    "status": "draft",
+    "origin": "self",
+    "steps": 4
   },
   {
     "id": "communicate-couple-dialogue",

@@ -1,0 +1,23 @@
+id: life-cook-done-then-season
+title: 做饭：先做熟，再调味
+domain: life
+intent: 把做饭压成两步——先把食材做熟，再调味；避免一开始就纠结味道导致翻车
+principle: 开门（开火做熟）→ 放入（调味）→ 关门（试吃）
+origin: self
+steps:
+  - name: 先做熟
+    detail: 只盯火候与熟度：炒透、煮软、蒸熟。此阶段不纠结咸淡香辣，不做「边炒边晃瓶」。
+  - name: 再调味
+    detail: 熟了之后再盐、酱、酸、辣；一次只调一样，试吃后再决定要不要加下一味。
+summit: |
+  待实践：哪些菜必须中途下酱（如上色、勾芡）算例外；「熟」的手感标准按菜类再补。
+practice: []
+when_to_use: 家常做饭、怕步骤一多就乱、或总想着「调料怎么配」却先把菜炒生/炒焦时。
+boundaries: 不是否定调料学；要细抠菜类与调料节奏时用 life-cook-by-seasoning-and-dish。中途必须下酱的菜（红烧上色等）别硬套「全程零调料再收口」。
+source: 自己定义 · 2026-10-28 · 用户口述：第一步做熟，第二步调味
+status: draft
+tags:
+  - 做饭
+  - 家常
+  - 自己定义
+updated: "2026-10-28"
